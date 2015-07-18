@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Load Events</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h4 class="title">Censored Keyboard</h4>
+    <h1 id="beforeMe"></h1>
+    <span id="afterText"></span>
+    <div class="wrapper">
+      <input type="text" id="test">
+      <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+    </div>
+    <script>
+    var before = document.getElementById('beforeMe');
+    var afterText = document.getElementById('afterText');
+    var field = document.getElementById('test');
+    var x = 88;
+    var w = 87;
+    var q = 81;
+
+    textarea.addEventListener("keydown", function(event) {
+      console.log(event.keyCode);
+      if (event.keyCode == "Q".charCodeAt(0) || event.keyCode == "W".charCodeAt(0) || event.keyCode == "X".charCodeAt(0))
+      event.preventDefault();
+
+    });
+
+    textarea.addEventListener("keypress", function(event) {
+      var stringy = String.fromCharCode(event.charCode);
+      console.log(stringy);
+      before.textContent = stringy;
+    });
+
+ //    addEventListener("keydown", function(event) {
+ //   if (event.keyCode == 86)
+ //     document.body.style.background = "violet";
+ // });
+ // addEventListener("keyup", function(event) {
+ //   if (event.keyCode == 86)
+ //     document.body.style.background = "";
+ // });
+    </script>
+</body>
+
+</html>

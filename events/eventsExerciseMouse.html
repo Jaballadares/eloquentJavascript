@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Trail</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+    .trail {
+      position: absolute;
+      height: 6px;
+      width: 6px;
+      background: tomato;
+      border-radius: 3px;
+    }
+    body {
+      height: 300px;
+    }
+    </style>
+</head>
+
+<body>
+    <h4 class="title">Mouse Trail</h4>
+    <h1 id="beforeMe"></h1>
+    <span id="afterText"></span>
+
+
+    <script>
+    var before = document.getElementById('beforeMe');
+
+    var dots = [];
+    for (var i = 0; i < 12; i++) {
+      var node = document.createElement("div");
+      node.className = "trail";
+      document.body.appendChild(node);
+      dots.push(node);
+    }
+    var currentDot = 0;
+
+    addEventListener("mousemove", function(event) {
+      var dot = dots[currentDot];
+      dot.style.left = (event.pageX - 3) + "px";
+      dot.style.top = (event.pageY - 3) + "px";
+      currentDot = (currentDot + 1) % dots.length;
+    });
+
+    </script>
+</body>
+
+</html>

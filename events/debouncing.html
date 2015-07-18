@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Load Events</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h4 class="title">Debouncing</h4>
+    <h1 id="beforeMe"><span style="font-size: .6em;" id="smaller"></span></h1>
+    <textarea id="textArea">Type Something Here...</textarea>
+    <span id="afterText"></span>
+    <script>
+    var textarea = document.getElementById('textArea');
+    var before = document.getElementById('beforeMe');
+    var smaller = document.getElementById('smaller');
+    var afterText = document.getElementById('afterText');
+    var timeout;
+
+    textarea.addEventListener("keydown", function() {
+      clearTimeout(timeout);
+      timeout = setTimeout(function() {
+        afterText.textContent = "You stopped typing."
+      }, 500);
+    });
+
+    function displayCoords(event) {
+      smaller.textContent = "Mouse at " + event.pageX + ", " + event.pageY;
+    }
+
+    var scheduled = false, lastEvent;
+    addEventListener("mousemove", function(event) {
+      lastEvent = event;
+      if (!scheduled) {
+        scheduled = true;
+        setTimeout(function() {
+          scheduled = false;
+          displayCoords(lastEvent);
+        }, 250);
+      }
+    });
+    </script>
+</body>
+
+</html>

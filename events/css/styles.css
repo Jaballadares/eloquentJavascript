@@ -1,0 +1,39 @@
+/* Coolors Exported Palette - coolors.co/4281a4-48a9a6-e4dfda-d4b483-c1666b */
+body {
+  background: #4281a4;
+  font-family: 'Source Sans Pro';
+  color: #e4dfda;
+  margin: 0 auto;
+  width: 90%; }
+
+.title {
+  font-size: 2em; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+#replace {
+  background: #e6c200;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+  font-size: 1.4em; }
+  #replace:hover {
+    background: teal;
+    cursor: pointer; }
+
+.constructors {
+  background: tomato; }
+
+#beforeMe {
+  text-align: center;
+  font-size: 5em; }
+
+#beforeMe.red {
+  color: tomato;
+  font-size: 9em; }
+
+.wrapper {
+  display: block; }

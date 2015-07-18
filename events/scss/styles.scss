@@ -1,0 +1,49 @@
+@import "palette";
+
+body {
+  background: $blue;
+  font-family: 'Source Sans Pro';
+  color: $cream;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.title {
+  font-size: 2em;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#replace {
+  background: darken(gold, 5%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+  font-size: 1.4em;
+  &:hover {
+    background: teal;
+    cursor: pointer;
+  }
+}
+
+.constructors {
+  background: tomato;
+}
+
+#beforeMe {
+  text-align: center;
+  font-size: 5em;
+}
+
+#beforeMe.red {
+  color: tomato;
+  font-size: 9em;
+}
+
+.wrapper {
+  display: block;
+}

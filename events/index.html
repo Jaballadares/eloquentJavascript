@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes from Eloquent Javascript</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h4 class="title">The DOM</h4>
+    <h5>Jargon</h5>
+    <ul>
+        <li>"Trees" as data structures</li>
+        <li>Each node may refer to other nodes, <em>Children</em>, which in turn may have their own children</li>
+        <li>Nested Structures</li>
+        <li><strong>A node may NOT contain itself, directly, or indirectly.</strong></li>
+        <li>Has single well defined root</li>
+        <li>In the DOM, <code>document.documentElement</code> serves as the root</li>
+        <li>Example of a child node would be <code>document.body</code></li>
+        <li>Some can be leaf nodes, such as comments or pieces of text</li>
+    </ul>
+
+    <div class="constructors">
+        <h4 class="title">Constructors</h4>
+        <p>A constructor is used with the <code>New</code> keyword:</p>
+        <code>
+            var Vehicle = function Vehicle() {
+                //
+            }
+            var vehicle = new Vehicle();
+
+        </code>
+    </div>
+</body>
+
+</html>
